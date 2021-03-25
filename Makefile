@@ -4,10 +4,10 @@ html:
 	# The following line matches a specific line in the python file
 	# and truncate the file the. The goal is to avoid running the
 	# last part of the notebook which takes very long to run
-	sed '/# --------/,$$d' modeling.py > modeling_short.py
-	sphx_glr_python_to_jupyter.py modeling_short.py
-	jupyter nbconvert --execute --to html modeling_short.ipynb
-	rm -rf modeling_short.ipynb modeling_short.py
+	# sed '/# --------/,$$d' modeling.py > modeling_short.py
+	# sphx_glr_python_to_jupyter.py modeling_short.py
+	# jupyter nbconvert --execute --to html modeling_short.ipynb
+	# rm -rf modeling_short.ipynb modeling_short.py
 	# Now build the app
 	export DEBUG=False && python3 app.py &
 	sleep 60
@@ -28,7 +28,7 @@ html:
 	ps | grep python | awk '{print $$1}' | xargs kill -9	
 
 update:
-	cd COVID-19 && git pull
+	cd covid-vaccine-tracker-data && git pull
 
 submodules:
 	git submodule init
