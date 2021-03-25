@@ -1,0 +1,51 @@
+[
+  {
+    "clientside_function": null, 
+    "inputs": [
+      {
+        "id": "years-slider", 
+        "property": "value"
+      }
+    ], 
+    "output": "county-choropleth.figure", 
+    "prevent_initial_call": false, 
+    "state": [
+      {
+        "id": "county-choropleth", 
+        "property": "figure"
+      }
+    ]
+  }, 
+  {
+    "clientside_function": null, 
+    "inputs": [
+      {
+        "id": "years-slider", 
+        "property": "value"
+      }
+    ], 
+    "output": "heatmap-title.children", 
+    "prevent_initial_call": false, 
+    "state": []
+  }, 
+  {
+    "clientside_function": null, 
+    "inputs": [
+      {
+        "id": "county-choropleth", 
+        "property": "selectedData"
+      }, 
+      {
+        "id": "chart-dropdown", 
+        "property": "value"
+      }, 
+      {
+        "id": "years-slider", 
+        "property": "value"
+      }
+    ], 
+    "output": "selected-data.figure", 
+    "prevent_initial_call": false, 
+    "state": []
+  }
+]
